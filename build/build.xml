@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="/Users/zozoh/workspace/git/github/zweb" default="run" basedir=".">
+	<description>
+       Auto generated build.xml for /Users/zozoh/workspace/git/github/zweb
+    </description>
+	<!-- set global properties for this build -->
+	<property environment="env" />
+
+	<property name="JAVA_HOME" value="" />
+	<property name="DEPS" value="" />
+	<property name="DEST" value="" />
+	<property name="PROJECT_HOME" value="" />
+
+	<property name="SRC" value="/build/src" />
+	<property name="TMP" value="/build/temp" />
+
+	<property name="JDK_VERSION" value="1.6" />
+
+
+	<property name="v" value="1.0" />
+
+	<path id="CLASSPATH">
+		<fileset dir="" casesensitive="no">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement location="/lib/rt.jar" />
+	</path>
+
+	<target name="init">
+		<mkdir dir="" />
+		<copy todir="">
+			<fileset dir="/src" includes="**/*.java" />
+		</copy>
+		<copy todir="">
+			<fileset dir="/tmpl-freemarker" includes="**/*.java" />
+		</copy>
+		<mkdir dir="" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="" destdir=""
+			debuglevel="lines,vars,source" debug="true" 
+			source="" target="" 
+			encoding="UTF-8" listfiles="off"
+			includeantruntime="false"
+			fork="true">
+			<compilerarg value="-Xlint:all" />
+			<classpath refid="CLASSPATH" />
+		</javac>
+		<copy todir="">
+			<fileset dir="/src" excludes="**/*.java" />
+		</copy>
+	</target>
+
+	<target name="jar" depends="compile">
+		<echo message="TMP: " />
+		<jar destfile="//Users/zozoh/workspace/git/github/zweb-.jar" 
+			 basedir=""
+			 includes="**" />
+	</target>
+
+	<target name="run" depends="jar">
+		<delete dir="" />
+		<delete dir="" />
+	</target>
+</project>

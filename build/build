@@ -1,0 +1,7 @@
+#! /bin/sh
+export JAVA_HOME=~/opt/java/jdk
+export DEPS=~/nutz/deps/web
+export OUTPUT=~/zzh/output
+export PROJECT_HOME=/Users/zozoh/workspace/git/github/zweb
+
+ant -f $PROJECT_HOME/build/build.xml
